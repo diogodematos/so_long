@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_checkmap3.c                                     :+:      :+:    :+:   */
+/*   ft_check3.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dcarrilh <dcarrilh@student.42porto.com>    +#+  +:+       +#+        */
+/*   By: dcarrilh <dcarrilh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:29:25 by dcarrilh          #+#    #+#             */
-/*   Updated: 2023/09/26 16:24:37 by dcarrilh         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:50:43 by dcarrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ int	ft_checkpath(int x, int y)
 		map()->cc++;
 	if (map()->map_copy[y][x] == 'E')
 	{
-		if (map()->cc == map()->collectible)
 			map()->ec++;
-		return (0);
+			map()->map_copy[y][x] = 'X';
+			return (1);
 	}
 	map()->map_copy[y][x] = 'X';
 	ft_checkpath(x + 1, y);

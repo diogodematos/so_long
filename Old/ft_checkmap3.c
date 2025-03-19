@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   ft_checkmap3.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: dcarrilh <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: dcarrilh <dcarrilh@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2023/05/03 11:29:25 by dcarrilh          #+#    #+#             */
-/*   Updated: 2023/05/19 09:08:36 by dcarrilh         ###   ########.fr       */
+/*   Updated: 2025/03/19 17:47:26 by dcarrilh         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,9 +20,9 @@ int	ft_checkpath(t_map *map, int x, int y)
 		map->cc++;
 	if (map->map_check[y][x] == 'E')
 	{
-		if (map->cc != map->collectible)
-			return (1);
 		map->ec++;
+		map->map_check[y][x] = 'X';
+		return (1);
 	}
 	map->map_check[y][x] = 'X';
 	ft_checkpath(map, x + 1, y);
